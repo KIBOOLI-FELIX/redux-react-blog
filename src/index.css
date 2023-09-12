@@ -50,6 +50,7 @@ button {
 section{
   background-color: #242424;
   margin:15px;
+  color:white;
 }
 article{
   border:2px solid gray;
@@ -60,6 +61,6 @@ p{
   font-weight: bold;
   margin: 10px;
 }
-h3{
+h3,h2{
   text-align: center;
 }

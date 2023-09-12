@@ -12,7 +12,7 @@ const FriendsList=()=> {
  
   return (
     <section>
-      <h2>Posts</h2>
+      <h2>My Friends</h2>
       {renderedFriends}
     </section>
   )

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = [
   {
@@ -26,8 +26,24 @@ const initialState = [
 const friendsSlice = createSlice({
   name: "friends",
   initialState,
-  reducers: {},
+  reducers: {
+    addFriend:{
+      reducer(state,action){
+      state.push(action.payload)
+    },
+    prepare(name,content){
+      return{
+        payload:{
+          id:nanoid(),
+          name,
+          content
+        }
+      }
+    }
+  }
+  },
 });
 
 export const selectAllFriends=(state)=>state.friends;
+export const {addFriend}=friendsSlice.actions
 export default friendsSlice.reducer;
